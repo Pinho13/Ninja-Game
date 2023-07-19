@@ -75,7 +75,7 @@ public class GrappleScript : MonoBehaviour
             }
         }
 
-        if(grappleState == GrappleState.Shot && Vector2.Distance(PlayerPos, GrappleSpawned.transform.position) > maxDistance)
+        if(grappleState == GrappleState.Shot && !Input.GetMouseButton(0))
         {
             Destroy(GrappleSpawned);
             grappleState = GrappleState.Idle;
